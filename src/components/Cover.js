@@ -17,7 +17,7 @@ function Cover() {
             <Grid item xs={10} >
             <div className="cover__description ">
                 <Typography className="typography"   >
-                    Hello, I am <span className="name">Patrick Wehbe</span>, a student at the American University of Beirut.
+                    Hello, I am <span className="name">Patrick Wehbe</span>, a junior at the American University of Beirut.
                 </Typography>
                 </div>
                 </Grid>

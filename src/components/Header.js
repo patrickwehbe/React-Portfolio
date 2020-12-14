@@ -1,48 +1,41 @@
 import React, { useState } from 'react';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import '../components/Header.css'
 
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
-  
-} from 'reactstrap';
+
  
   
 
 function Header() {
-  
-   const [isOpen, setIsOpen] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
-  const toggle = () => setIsOpen(!isOpen);
+  const toggleNavbar = () => setCollapsed(!collapsed);
 
  
     return (
        <div className='header'>
          
-      <Navbar className="header" light expand="md">
-        <NavbarText><span className="firstName mr-auto">Patrick</span> Wehbe</NavbarText>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav  navbar>
-            <NavItem>
-              <NavLink className="link" href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink className="link" href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
+       <Navbar className="navbar">
+         
+        <NavbarBrand href="/" className="mr-auto name "><span className="firstName">Patrick </span>Wehbe</NavbarBrand>
+        
+              <NavLink className="link" href="/components/">About Me</NavLink>
+            
+            
+              <NavLink className="link" href="https://github.com/reactstrap/reactstrap">Projects</NavLink>
+            
+            
+              <NavLink className="link" href="https://github.com/reactstrap/reactstrap">Blog</NavLink>
+            
+            
+              <NavLink className="link" href="https://github.com/reactstrap/reactstrap">Contact</NavLink>
+            
+        <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+        <Collapse isOpen={!collapsed} navbar>
+          <Nav navbar>
+            
             
           </Nav>
-          
         </Collapse>
       </Navbar>
     </div>

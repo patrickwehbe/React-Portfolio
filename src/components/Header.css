@@ -5,16 +5,23 @@
     height: 10vh;
     position: fixed !important;
     width: 100vw;
+    padding: 25px;
    
    
 }
+.navbar{
+    color: white !important;
+}
+
 .firstName{
     color: gray;
 }
+
 .link{
     color: white !important ;
     font-weight: bold;
     font-size: large;
+    text-decoration: none;
 }
 .link:hover{
     color: #61ce70 !important;
