@@ -1,0 +1,12 @@
+.description{
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    margin-left: 30vw;
+    font-size: 5vw !important;
+    word-wrap: break-word;
+    
+}
+.last{
+    color: #61ce70;
+}

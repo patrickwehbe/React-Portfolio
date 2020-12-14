@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../components/Header.css'
-import Avatar from '@material-ui/core/Avatar'
-import profile from '../Images/profile.JPG'
+
 import {
   Collapse,
   Navbar,
@@ -10,34 +9,40 @@ import {
   Nav,
   NavItem,
   NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
   NavbarText
+  
 } from 'reactstrap';
+ 
+  
 
 function Header() {
-    const [isOpen, setIsOpen] = useState(false);
+  
+   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
+ 
     return (
-       <div className="header">
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Home</NavbarBrand>
+       <div className='header'>
+         
+      <Navbar className="header" light expand="md">
+        <NavbarText><span className="firstName mr-auto">Patrick</span> Wehbe</NavbarText>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+          <Nav  navbar>
             <NavItem>
-              <NavLink href="/components/">About Me</NavLink>
+              <NavLink className="link" href="/components/">Components</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">Projects</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">Contact Me</NavLink>
+              <NavLink className="link" href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
             </NavItem>
             
           </Nav>
-          <NavbarText>
-              <Avatar src={profile} />
-          </NavbarText>
+          
         </Collapse>
       </Navbar>
     </div>

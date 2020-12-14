@@ -1,0 +1,23 @@
+.cover{
+    height: 100vh;
+}
+img{
+    height: 100vh;
+    width: 70vw;
+    object-fit: contain;
+    padding-right: 20vw;
+}
+.cover__description{
+    padding-left: 30vw;
+    padding-top: 40vh;
+    color: white;
+   
+    
+    
+}
+.name{
+    color: #61ce70;
+}
+.typography{
+    font-size: 3.5vw !important;
+}
