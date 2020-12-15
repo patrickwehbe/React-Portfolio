@@ -2,14 +2,14 @@
     height: 100vh;
 }
 img{
-    height: 100vh;
+    height: 80vh;
     width: 70vw;
     object-fit: contain;
     padding-right: 20vw;
 }
 .cover__description{
     padding-left: 30vw;
-    padding-top: 40vh;
+    padding-top: 50vh;
     color: white;
    
     
@@ -19,5 +19,5 @@ img{
     color: #61ce70 !important;
 }
 .typography{
-    font-size: 3.5vw !important;
+    font-size: 2vw !important;
 }

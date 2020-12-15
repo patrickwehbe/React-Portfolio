@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import {  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText} from 'reactstrap';
 import '../components/Header.css'
 
 
@@ -7,35 +18,30 @@ import '../components/Header.css'
   
 
 function Header() {
-  const [collapsed, setCollapsed] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar = () => setCollapsed(!collapsed);
+  const toggle = () => setIsOpen(!isOpen);
 
  
     return (
        <div className='header'>
          
-       <Navbar className="navbar">
-         
-        <NavbarBrand href="/" className="mr-auto name "><span className="firstName">Patrick </span>Wehbe</NavbarBrand>
-        
-              <NavLink className="link" href="/components/">About Me</NavLink>
-            
-            
-              <NavLink className="link" href="https://github.com/reactstrap/reactstrap">Projects</NavLink>
-            
-            
-              <NavLink className="link" href="https://github.com/reactstrap/reactstrap">Blog</NavLink>
-            
-            
-              <NavLink className="link" href="https://github.com/reactstrap/reactstrap">Contact</NavLink>
-            
-        <NavbarToggler onClick={toggleNavbar} className="mr-2" />
-        <Collapse isOpen={!collapsed} navbar>
-          <Nav navbar>
-            
-            
+       <Navbar className="navbar" dark expand="md">
+        <NavbarBrand href="/">Patrick <span className="lastName">Wehbe</span></NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar >
+          <Nav className="mr-auto" navbar dark>
+            <NavItem>
+              <NavLink href="/components/">Components</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+            </NavItem>
+            <UncontrolledDropdown nav inNavbar >
+              
+            </UncontrolledDropdown>
           </Nav>
+          <NavbarText>Simple Text</NavbarText>
         </Collapse>
       </Navbar>
     </div>
